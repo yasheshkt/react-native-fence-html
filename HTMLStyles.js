@@ -172,13 +172,13 @@ class HTMLStyles {
 
         const testStyle = {}
         testStyle[key] = value
-        if (styleProps[key](testStyle, key, '', 'prop')) {
+        if (PropTypes.checkPropTypes(styleProps[key], testStyle, key, 'prop')) {
           // See if we can convert a 20px to a 20 automagically
           if (styleProps[key] === PropTypes.number) {
             const numericValue = parseFloat(value.replace('px', ''))
             if (!isNaN(numericValue)) {
               testStyle[key] = numericValue
-              if (!styleProps[key](testStyle, key, '', 'prop')) {
+              if (!PropTypes.checkPropTypes(styleProps[key], testStyle, key, 'prop')) {
                 return [key, numericValue]
               }
             }
