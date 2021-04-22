@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 
 // We have to do some munging here as the objects are wrapped
-import _RNTextStylePropTypes from 'react-native/Libraries/DeprecatedPropTypes/TextStylePropTypes'
+import _RNTextStylePropTypes from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedTextStylePropTypes'
 import _RNViewStylePropTypes from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedViewStylePropTypes'
 import _RNImageStylePropTypes from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedImageStylePropTypes'
 const RNTextStylePropTypes = Object.keys(_RNTextStylePropTypes)
